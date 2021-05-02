@@ -97,6 +97,9 @@
     else{
         self.iconImage = nil;
     }
+//    self.iconImage = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+    [self setIconImageCustom];
+  
 }
 
 - (void)setSelected:(BOOL)selected
@@ -112,5 +115,47 @@
     }
 }
 
+- (void) setIconImageCustom
+{
+    
+    UIImage* image;
+    if   ([self.title  isEqual: @"Filter"] ) {
+        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+        
+        
+    }else  if   ([self.title  isEqual: @"Adjustment"] ) {
+//        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+        
+        
+    }else  if   ([self.title  isEqual: @"Effect"] ) {
+//        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+        
+        
+    }else  if   ([self.title  isEqual: @"Blur & Focus"] ) {
+//        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+        
+        
+    }else  if   ([self.title  isEqual: @"Draw"] ) {
+//        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+        
+        
+    } else  if   ([self.title  isEqual: @"ToneCurve"] ) {
+//        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+        
+        
+    }
+     
+    CGImageRef cgref = [image CGImage];
+    CIImage *cim = [image CIImage];
+    
+    if (cim != nil || cgref != NULL)
+    {
+        _iconView.image = image;
+        NSLog(@"found image for",self.title);
+        self.title = @"My Filter";
+    }
+}
+
 @end
+ 
 
