@@ -29,6 +29,12 @@
         info.iconImagePath = [toolClass defaultIconImagePath];
         info.subtools = [toolClass subtools];
         info.optionalInfo = [[toolClass optionalInfo] mutableCopy];
+          
+        if   ([info.title   isEqual: @"Crop"] || [info.title   isEqual: @"Rotate"] ) {
+            return nil;
+        }else {
+                return info;
+        }
         
         return info;
     }
