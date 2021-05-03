@@ -120,29 +120,28 @@
     
     UIImage* image;
     if   ([self.title  isEqual: @"Filter"] ) {
-        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+        image  = [UIImage imageNamed:@"CLImageEditorFilter.png"];
         
         
     }else  if   ([self.title  isEqual: @"Adjustment"] ) {
-//        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+        image  = [UIImage imageNamed:@"CLImageEditorAdjustment.png"];
         
         
     }else  if   ([self.title  isEqual: @"Effect"] ) {
-//        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+        image  = [UIImage imageNamed:@"CLImageEditorEffect.png"];
         
         
     }else  if   ([self.title  isEqual: @"Blur & Focus"] ) {
-//        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+        image  = [UIImage imageNamed:@"CLImageEditorBlur_&_Focus.png"];
         
         
     }else  if   ([self.title  isEqual: @"Draw"] ) {
-//        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
+        image  = [UIImage imageNamed:@"CLImageEditorDraw.png"];
         
         
     } else  if   ([self.title  isEqual: @"ToneCurve"] ) {
-//        image  = [UIImage imageNamed:@"CLImageEditorPhoto.png"];
-        
-        
+        image  = [UIImage imageNamed:@"CLImageEditorToneCurve.png"];
+         
     }
      
     CGImageRef cgref = [image CGImage];
