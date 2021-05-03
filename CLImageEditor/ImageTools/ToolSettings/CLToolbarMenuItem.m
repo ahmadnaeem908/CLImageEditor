@@ -151,7 +151,6 @@
     {
         _iconView.image = image;
         NSLog(@"found image for",self.title);
-        self.title = @"My Filter";
     }
 }
 
