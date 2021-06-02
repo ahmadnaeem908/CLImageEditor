@@ -108,10 +108,11 @@ static const CGFloat kMenuBarHeight = 80.0f;
         UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, dy, self.view.width, kNavBarHeight)];
         [navigationBar pushNavigationItem:navigationItem animated:NO];
         navigationBar.delegate = self;
-        
+        CGFloat safeAreaTopInset = UIApplication.sharedApplication.windows.firstObject.safeAreaInsets.top;
+        NSNumber *topPadding = [NSNumber numberWithDouble:safeAreaTopInset];
         if(self.navigationController){
             [self.navigationController.view addSubview:navigationBar];
-            [_CLImageEditorViewController setConstraintsLeading:@0 trailing:@0 top:nil bottom:nil height:@(kNavBarHeight) width:nil parent:self.navigationController.view child:navigationBar peer:nil];
+            [_CLImageEditorViewController setConstraintsLeading:@0 trailing:@0 top:topPadding bottom:nil height:@(kNavBarHeight) width:nil parent:self.navigationController.view child:navigationBar peer:nil];
         }
         else{
             [self.view addSubview:navigationBar];
