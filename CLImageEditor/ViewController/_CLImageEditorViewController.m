@@ -138,6 +138,11 @@ static const CGFloat kMenuBarHeight = 80.0f;
     if([UIDevice iosVersion] < 7){
         _navigationBar.barStyle = UIBarStyleBlackTranslucent;
     }
+    _navigationBar.tintColor = UIColor.whiteColor;
+    _navigationBar.barTintColor = UIColor.blackColor;
+    _navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+
+
 }
 
 - (void)initMenuScrollView
@@ -161,6 +166,7 @@ static const CGFloat kMenuBarHeight = 80.0f;
         [_CLImageEditorViewController setConstraintsLeading:@0 trailing:@0 top:nil bottom:@0 height:@(menuScroll.height) width:nil parent:self.view child:menuScroll peer:nil];
     }
     self.menuView.backgroundColor = [CLImageEditorTheme toolbarColor];
+    self.view.backgroundColor = UIColor.blackColor;
 }
 
 - (void)initImageScrollView
